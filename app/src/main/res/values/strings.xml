@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Premote-android</string>
+    <string name="mail">E-Mail</string>
+    <string name="password">Password</string>
+    <string name="logIn">Log in</string>
+    <string name="signUp">Sign up</string>
+    <string name="forgotPass">Forgot Password</string>
+    <string name="wrongMailFormat">Wrong mail formatting!</string>
+    <string name="wrongPasswordFormat">Wrong Password Formatting!</string>
+    <string name="enterMail">Please enter mail</string>
+    <string name="enterPassword">Enter your Password!</string>
+    <string name="unknownError">Unknown Error, Please try again later</string>
 </resources>

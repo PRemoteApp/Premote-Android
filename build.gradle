@@ -12,6 +12,7 @@ buildscript {
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+        classpath 'com.google.gms:google-services:3.1.1'
     }
 }
 
@@ -24,8 +25,11 @@ allprojects {
 
 ext {
     compileSdkVersion = 27
-    supportLibVersion = "27.0.3"
+    buildToolsVersion = "27.0.3"
     appCompatVersion = "27.1.0"
+    butterKnifeVersion = "8.8.1"
+    designLibVersion = "28.2.0"
+    firebaseVersion = "12.0.1"
 }
 
 task clean(type: Delete) {

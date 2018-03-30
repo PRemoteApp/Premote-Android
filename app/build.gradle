@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.supportLibVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
         applicationId "com.example.finkacho.premote_android"
         minSdkVersion 15
@@ -22,11 +22,21 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "com.android.support:appcompat-v7:$rootProject.ext.appCompatVersion"
+    implementation "com.android.support:support-core-utils:$rootProject.ext.appCompatVersion"
 
+    implementation "com.android.support:design:$rootProject.ext.appCompatVersion"
 
+    // Butterknife
+    implementation "com.jakewharton:butterknife:$rootProject.ext.butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterKnifeVersion"
+
+    // Firebase
+    implementation "com.google.firebase:firebase-auth:$rootProject.ext.firebaseVersion"
 
     // will fix hardcode of this if i will have time to write tests
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
+
+apply plugin: 'com.google.gms.google-services'
