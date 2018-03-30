@@ -13,4 +13,10 @@
         <item name="colorAccent">@android:color/white</item>
     </style>
 
+    <style name="NavigationTheme">
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">#565252</item>
+    </style>
+
 </resources>

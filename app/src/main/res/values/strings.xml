@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Premote-android</string>
+    <string name="app_name">PRemote</string>
     <string name="mail">E-Mail</string>
     <string name="password">Password</string>
     <string name="logIn">Log in</string>
@@ -10,4 +10,9 @@
     <string name="enterMail">Please enter mail</string>
     <string name="enterPassword">Enter your Password!</string>
     <string name="unknownError">Unknown Error, Please try again later</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_commands">Commands</string>
+    <string name="title_settings">Settings</string>
+
 </resources>

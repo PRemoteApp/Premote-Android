@@ -12,6 +12,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
 
+import com.example.finkacho.premote_android.ui.MainActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -95,7 +96,7 @@ public class LoginActivity extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
                         } else {
-                            // catch error
+                            // catch error & display
                             String error = task.getException()==null? getString(R.string.unknownError): task.getException().getLocalizedMessage();
                             Snackbar.make(layout, error, Snackbar.LENGTH_SHORT).show();
                         }
@@ -106,13 +107,14 @@ public class LoginActivity extends AppCompatActivity {
     private void updateUI(FirebaseUser user) {
         if(user!=null){
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
-            overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
+            overridePendingTransition(R.anim.slide_right, R.anim.slide_left);
             finish();
         }
     }
 
     @Override
     protected void onStart() {
+        // check user status on start
         super.onStart();
         FirebaseUser cUser = mAuth.getCurrentUser();
         updateUI(cUser);
