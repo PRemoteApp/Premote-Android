@@ -1,12 +1,13 @@
 package com.example.finkacho.premote_android.ui.fragments;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
-import android.util.Log;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -101,19 +102,20 @@ public class MainFragment extends Fragment implements OnSuccessRecognition, OnRe
 
 
     private void sendDataToDatabase(String data){
-        database.getReference("commands").child(mUser.getUid()).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
+        database.getReference("commands").child(format(mUser.getEmail())).setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful()){
-                    if(getActivity()!=null){
-                        Toast.makeText(getActivity(), getResources().getString(R.string.commandSendSuccess), Toast.LENGTH_SHORT).show();
-                    }
-                }else{
+                if(!task.isSuccessful()){
                     String error = task.getException()==null?getResources().getString(R.string.unknownError):task.getException().getMessage();
                     Toast.makeText(getActivity(), error, Toast.LENGTH_SHORT).show();
                 }
             }
         });
+    }
+
+    private String format(String email) {
+        if(email==null) return "";
+        return email.replace(".", ",");
     }
 
     @Override
@@ -122,12 +124,30 @@ public class MainFragment extends Fragment implements OnSuccessRecognition, OnRe
     }
 
     @Override
-    public void onSuccess(String recognizedText) {
+    public void onSuccess(final String recognizedText) {
         boolean warning = sharedPrefs.getBoolean(Constants.keys.warning, false);
         if(!warning){
             sendDataToDatabase(recognizedText);
             return;
         }
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        String message = getResources().getString(R.string.recognizedAs) + " " + recognizedText + getResources().getString(R.string.wantToContinue);
+        builder.setMessage(message);
+        builder.setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                sendDataToDatabase(recognizedText);
+            }
+        });
+        builder.setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        builder.create().show();
 
     }
 

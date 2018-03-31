@@ -21,5 +21,10 @@
     <string name="commandToSend">Command to send</string>
     <string name="commandSendSuccess">command is sent :)</string>
     <string name="startCommanding">Start giving command</string>
+    <string name="recognizedAs">Your voice is recognized as:</string>
+    <string name="wantToContinue">. do you want to send this command?</string>
+    <string name="no">no</string>
+    <string name="yes">yes</string>
+    <string name="sign_out">Sign out</string>
 
 </resources>
