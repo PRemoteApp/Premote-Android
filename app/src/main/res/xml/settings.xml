@@ -1,0 +1,27 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="user_mail"
+        android:title="E-Mail"/>
+
+    <EditTextPreference
+        android:key="user_password"
+        android:title="Password"/>
+
+    <PreferenceCategory>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="recognize_warning"
+            android:title="Show warning on recognized speech"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="recognition_type"
+            android:title="Send commands via TEXT" />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

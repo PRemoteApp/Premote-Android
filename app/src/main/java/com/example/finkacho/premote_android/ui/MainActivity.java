@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new CommandsFragment();
                     break;
                 case R.id.navigation_notifications:
-                    fragment = new SettingsFragment();
-                    break;
+                    fragmentTransaction.replace(R.id.main_fragment_container, new SettingsFragment()).commit();
+                    return true;
                 default:
                     throw new IllegalArgumentException();
             }

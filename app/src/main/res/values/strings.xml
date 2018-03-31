@@ -14,5 +14,12 @@
     <string name="title_home">Home</string>
     <string name="title_commands">Commands</string>
     <string name="title_settings">Settings</string>
+    <string name="mail_change_success">Mail changed successfuly</string>
+    <string name="pass_change_success">Password changed successfuly</string>
+    <string name="hello">Hello</string>
+    <string name="send">Send</string>
+    <string name="commandToSend">Command to send</string>
+    <string name="commandSendSuccess">command is sent :)</string>
+    <string name="startCommanding">Start giving command</string>
 
 </resources>
