@@ -1,14 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.CommandsFragment">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/commandSearchBar"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawableStart="@drawable/ic_search"
+        android:inputType="text"
+        android:hint="@string/search_for_command"/>
+
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="" />
+        android:layout_below="@id/commandSearchBar"
+        android:id="@+id/mCommandsList"/>
 
-</FrameLayout>
+
+</RelativeLayout>

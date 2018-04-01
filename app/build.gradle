@@ -41,6 +41,14 @@ dependencies {
     implementation "com.google.firebase:firebase-auth:$rootProject.ext.firebaseVersion"
     implementation "com.google.firebase:firebase-database:$rootProject.ext.firebaseVersion"
 
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
+
+    // Recycler View
+    implementation "com.android.support:recyclerview-v7:$rootProject.ext.appCompatVersion"
+
+
 
     // will fix hardcode of this if i will have time to write tests
     testImplementation 'junit:junit:4.12'
