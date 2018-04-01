@@ -18,6 +18,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -30,8 +34,8 @@ dependencies {
 
     // Butterknife
     implementation "com.jakewharton:butterknife:$rootProject.ext.butterKnifeVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterKnifeVersion"
-
 
     // Design
     implementation "com.android.support:design:$rootProject.ext.appCompatVersion"
@@ -47,8 +51,6 @@ dependencies {
 
     // Recycler View
     implementation "com.android.support:recyclerview-v7:$rootProject.ext.appCompatVersion"
-
-
 
     // will fix hardcode of this if i will have time to write tests
     testImplementation 'junit:junit:4.12'

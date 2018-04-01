@@ -1,4 +1,5 @@
-<RelativeLayout android:layout_width="match_parent"
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:id="@+id/login_layout"
@@ -9,7 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/logo"
-        android:id="@+id/logo"/>
+        android:id="@+id/logo"
+        android:transitionName="splashLogo"
+        tools:targetApi="lollipop" />
     
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"

@@ -89,7 +89,7 @@ public class MainFragment extends Fragment implements OnSuccessRecognition, OnRe
 
 
     @OnClick(R.id.commandSenderBtn)
-    public void onClick(View view){
+    public void onClick(){
         String command = commandInput.getText().toString();
         sendDataToDatabase(command);
     }
