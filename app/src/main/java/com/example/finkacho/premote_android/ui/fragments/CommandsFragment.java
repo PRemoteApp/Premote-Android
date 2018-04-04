@@ -18,7 +18,6 @@ import android.widget.Toast;
 import com.example.finkacho.premote_android.R;
 import com.example.finkacho.premote_android.data.Command;
 import com.example.finkacho.premote_android.helpers.PremoteService;
-import com.example.finkacho.premote_android.ui.MainActivity;
 import com.example.finkacho.premote_android.ui.adapters.CommandsListAdapter;
 
 import java.util.ArrayList;

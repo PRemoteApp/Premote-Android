@@ -27,5 +27,8 @@
     <string name="yes">yes</string>
     <string name="sign_out">Sign out</string>
     <string name="search_for_command">Search for command</string>
-
+    <string name="sign_up">Sign up</string>
+    <string name="forgot_password">forgot password?</string>
+    <string name="recover"> Recover </string>
+    <string name="password_reset_sent">Password reset link has been sent to your email! :)</string>
 </resources>

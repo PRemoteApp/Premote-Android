@@ -116,4 +116,12 @@ public class LoginActivity extends AppCompatActivity {
         FirebaseUser cUser = mAuth.getCurrentUser();
         updateUI(cUser);
     }
+
+
+    @OnClick(R.id.passRecover)
+    public void onRecoverClicked(){
+        startActivity(new Intent(LoginActivity.this, PasswordRecoveryActivity.class));
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+    }
+
 }
