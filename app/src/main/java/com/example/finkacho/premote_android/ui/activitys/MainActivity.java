@@ -1,4 +1,4 @@
-package com.example.finkacho.premote_android.ui;
+package com.example.finkacho.premote_android.ui.activitys;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -12,7 +12,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.example.finkacho.premote_android.LoginActivity;
 import com.example.finkacho.premote_android.R;
 import com.example.finkacho.premote_android.ui.fragments.CommandsFragment;
 import com.example.finkacho.premote_android.ui.fragments.MainFragment;

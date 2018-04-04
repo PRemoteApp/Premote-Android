@@ -1,4 +1,4 @@
-package com.example.finkacho.premote_android;
+package com.example.finkacho.premote_android.ui.activitys;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -12,7 +12,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
 
-import com.example.finkacho.premote_android.ui.MainActivity;
+import com.example.finkacho.premote_android.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -89,17 +89,14 @@ public class LoginActivity extends AppCompatActivity {
 
     private void login(String mail, String password) {
         mAuth.signInWithEmailAndPassword(mail, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
-                        } else {
-                            // catch error & display
-                            String error = task.getException()==null? getString(R.string.unknownError): task.getException().getLocalizedMessage();
-                            Snackbar.make(layout, error, Snackbar.LENGTH_SHORT).show();
-                        }
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        updateUI(user);
+                    } else {
+                        // catch error & display
+                        String error = task.getException()==null? getString(R.string.unknownError): task.getException().getLocalizedMessage();
+                        Snackbar.make(layout, error, Snackbar.LENGTH_SHORT).show();
                     }
                 });
     }
