@@ -27,8 +27,12 @@
     <string name="yes">yes</string>
     <string name="sign_out">Sign out</string>
     <string name="search_for_command">Search for command</string>
-    <string name="sign_up">Sign up</string>
     <string name="forgot_password">forgot password?</string>
     <string name="recover"> Recover </string>
     <string name="password_reset_sent">Password reset link has been sent to your email! :)</string>
+    <string name="display_name">Display name</string>
+    <string name="repeat_pass">Repeat password</string>
+    <string name="enterName">Please enter display name</string>
+    <string name="wrongNameFormat">Please enter valid name</string>
+    <string name="passNotMatch">Passwords does not match</string>
 </resources>

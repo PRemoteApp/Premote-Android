@@ -21,8 +21,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class CommandsListAdapter extends RecyclerView.Adapter<CommandsListAdapter.ViewHolder> implements Filterable {
-    List<Command> data = new ArrayList<>();
-    List<Command> original_data = new ArrayList<>();
+    private List<Command> data = new ArrayList<>();
+    private List<Command> original_data = new ArrayList<>();
 
     @Override
     public Filter getFilter() {

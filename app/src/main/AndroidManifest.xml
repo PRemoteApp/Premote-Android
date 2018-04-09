@@ -27,8 +27,11 @@
         <activity
             android:name=".ui.activitys.MainActivity"
             android:label="@string/app_name" />
-        <activity android:name=".ui.activitys.PasswordRecoveryActivity"
+        <activity
+            android:name=".ui.activitys.PasswordRecoveryActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.activitys.SignUpActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
