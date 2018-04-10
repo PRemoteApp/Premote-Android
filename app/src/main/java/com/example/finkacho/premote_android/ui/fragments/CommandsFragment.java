@@ -54,9 +54,9 @@ public class CommandsFragment extends Fragment implements TextWatcher {
 
 
         List<Command> commands = new ArrayList<>();
-        commands.add(new Command("open :social network:","this opens up facebook on your website"));
+        commands.add(new Command("open { social network }","this opens up social network on your pc"));
         commands.add(new Command("play music", "This command will play random music from your music folder"));
-        commands.add(new Command("google :query word:", "this command will show you results of your googling"));
+        commands.add(new Command("google { query word }", "this command will show you results of your googling"));
         commands.add(new Command("Hello", "this will appreaciate you and give you hello back"));
 
         adapter.addItems(commands);
@@ -85,12 +85,12 @@ public class CommandsFragment extends Fragment implements TextWatcher {
 
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        this.adapter.getFilter().filter(s);
+
     }
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-
+        this.adapter.getFilter().filter(s);
     }
 
     @Override

@@ -5,7 +5,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:textSize="22.5sp"
         android:id="@+id/commandSearchBar"
         android:drawableLeft="@drawable/ic_search"
         android:drawableStart="@drawable/ic_search"
