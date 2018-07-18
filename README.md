@@ -1,8 +1,9 @@
 <img src="https://user-images.githubusercontent.com/37747169/38216106-d74a953e-36da-11e8-9028-684ea87c70fa.png" width=200>
 <br>
 
-# PRemote-PC
-Remote PC controll application made during EUhack - Free Hacking
+# PRemote-Android
+Remote PC controll application made during EUhack - Free Hacking.
+This repository is Android side of PRemote.
 
 ### What is it?3
 PRemote is an application that allows you to control your from mobile.
@@ -15,7 +16,11 @@ PRemote is an application that allows you to control your from mobile.
  &emsp;and to ./PRemote-PC/app/ Folder <br>
 3. Run **PC** application via terminal using following code: 
 ```
- nohup python3 app.py &
+ # Ubuntu:
+ nohup python3 app.pyw &
+ 
+ # Windows:
+ python3 app.pyw
 ```
 4. Connect to both devices from **SAME** account
 5. &emsp;Click the Microphone button on phone <br>
